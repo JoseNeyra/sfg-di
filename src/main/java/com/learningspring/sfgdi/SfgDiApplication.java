@@ -2,14 +2,18 @@ package com.learningspring.sfgdi;
 
 import ch.qos.logback.core.net.SyslogOutputStream;
 import com.learningspring.sfgdi.controllers.*;
+import com.learningspring.sfgdi.datasource.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * Created by jose- on 8/17/2021
  **/
 
+// Tells Spring what packages to look at for bean scanning
+@ComponentScan(basePackages = {"com.learningspring.sfgdi", "com.learningspring.greetings"})
 @SpringBootApplication
 public class SfgDiApplication {
 
